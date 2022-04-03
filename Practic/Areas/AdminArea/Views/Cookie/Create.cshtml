@@ -1,0 +1,33 @@
+﻿@model CookieVM
+@{
+    ViewData["Title"] = "Create";
+   
+}
+
+<div class="container my-5">
+    <form class="forms-sample mt-5" method="post" asp-action="Create" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="Images"></label>
+            <input class="form-control" style="width:300px" asp-for="Images">
+            <span class="text-danger" asp-validation-for="Images"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Header">Header:</label>
+            <input class="form-control" style="width:300px" asp-for="Header">
+            <span class="text-danger" asp-validation-for="Header"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Main">Main:</label>
+            <input class="form-control" style="width:300px" asp-for="Main">
+            <span class="text-danger" asp-validation-for="Main"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Footer">Footer:</label>
+            <input class="form-control" style="width:300px" asp-for="Footer">
+            <span class="text-danger" asp-validation-for="Footer"></span>
+        </div>
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <a asp-action="Index" class="btn btn-light">Cancel</a>
+    </form>
+</div>
+
